@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dress Up Fun</title> 
+
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #ffe4f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: #ff4081;
+    }
+
+    .character-container {
+      position: relative;
+      width: 90%;
+      max-width: 350px;
+      margin: 20px auto;
+      height: 500px;
+    }
+
+    .character-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    buttons {
+      padding: 12px 18px;
+      margin: 6px;
+      font-size: 16px;
+      border-radius: 12px;
+      border: none;
+      background-color: #ff80ab;
+      color: white;
+    }
+
+    button:active {
+      background-color: #e91e63;
+    }
+</style>
+</head>
+
+  <body>
+
+    <h1>Dress Up Fun 🎀</h1>
+
+    <div class="character-container">
+      <img src="body.png">
+      <img id="shirt" src="shirt1.png">
+      <img id="pants" src="pants1.png">
+      <img id="hat" src="hat1.png">
+    </div>
+
+    <div class="buttons">
+      <button onclick="changeShirt()">Change Shirt 👕</button>
+      <button onclick="chnagePants()">Change Pants 👖</button>
+      <button onlick="changeHat()">Change Hat 🎩</button>
+    </div>
+
+    <script>
+      let shirt = 1;
+      let pants = 1;
+      let hat = 1;
+
+      function changeShirt() {
+        shirt = shirt % 3 + 1;
+        document.getElementBgId("shirt").src = "shirt" + shirt + ".png";
+      }
+      function changePants() {
+        pants = pants % 3 + 1;
+        document.getElementById("pants").src = "pants" + pants + ".png";
+      }
+
+      function changeHat() {
+        hat = hat % 3 + 1;
+        document.getElementById("hat").src = "hat" + hat + ".png";
+      }
+
+</script>
+
+  </body>
+</html>
